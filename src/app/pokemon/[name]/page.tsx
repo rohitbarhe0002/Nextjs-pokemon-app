@@ -2,7 +2,7 @@ import { getPokemonDetails } from "@/lib/api";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 // import { redirect } from "next/navigation";
 
-export default async function PokemonDetails({ params }: { params: { name: string } }) {
+export default async function PokemonDetails({ params }: { params: { name: any } }) {
     const pokemon = await getPokemonDetails(params.name);
  
 
