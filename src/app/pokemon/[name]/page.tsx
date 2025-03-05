@@ -3,7 +3,7 @@ import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 
 
-export default async function PokemonDetails({ params }: { params: { name: string } }) {
+export default async function PokemonDetails(params:any ) {
 
   const pokemon = await getPokemonDetails(params.name);
 
