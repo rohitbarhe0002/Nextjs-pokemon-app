@@ -1,13 +1,10 @@
 import { getPokemonDetails } from "@/lib/api";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 
-interface PokemonDetailsProps {
-  params: {
-    name: string; // Explicitly set as string instead of `any`
-  };
-}
 
-export default async function PokemonDetails({ params }: PokemonDetailsProps) {
+
+export default async function PokemonDetails({ params }: { params: { name: string } }) {
+
   const pokemon = await getPokemonDetails(params.name);
 
   return (
